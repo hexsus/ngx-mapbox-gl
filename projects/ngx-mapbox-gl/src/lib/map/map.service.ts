@@ -6,7 +6,6 @@ import { AsyncSubject, Observable, Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
 import { BBox } from 'supercluster';
 import { MapEvent, MapImageData, MapImageOptions } from './map.types';
-
 export const MAPBOX_API_KEY = new InjectionToken('MapboxApiKey');
 
 export abstract class MglResizeEventEmitter {
@@ -713,9 +712,9 @@ export class MapService {
     if (prop.length > 1) {
       const e = prop.shift();
       this.assign(obj[e] =
-        Object.prototype.toString.call(obj[e]) === '[object Object]'
-          ? obj[e]
-          : {},
+          Object.prototype.toString.call(obj[e]) === '[object Object]'
+            ? obj[e]
+            : {},
         prop,
         value);
     } else {

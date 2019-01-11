@@ -22,6 +22,7 @@ import { ImageSourceComponent } from './source/image-source.component';
 import { RasterSourceComponent } from './source/raster-source.component';
 import { VectorSourceComponent } from './source/vector-source.component';
 import { VideoSourceComponent } from './source/video-source.component';
+import { DrawComponent } from './draw/draw.component';
 
 @NgModule({
   imports: [
@@ -50,7 +51,8 @@ import { VideoSourceComponent } from './source/video-source.component';
     ScaleControlDirective,
     PointDirective,
     ClusterPointDirective,
-    MarkerClusterComponent
+    MarkerClusterComponent,
+    DrawComponent
   ],
   exports: [
     MapComponent,
@@ -75,7 +77,8 @@ import { VideoSourceComponent } from './source/video-source.component';
     ScaleControlDirective,
     PointDirective,
     ClusterPointDirective,
-    MarkerClusterComponent
+    MarkerClusterComponent,
+    DrawComponent
   ]
 })
 export class NgxMapboxGLModule {

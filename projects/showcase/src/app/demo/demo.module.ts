@@ -43,6 +43,7 @@ import { ToggleLayersComponent } from './examples/toggle-layers.component';
 import { ZoomtoLinestringComponent } from './examples/zoomto-linestring.component';
 import { StackblitzEditGuard } from './stackblitz-edit/stackblitz-edit-guard.service';
 import { StackblitzEditComponent } from './stackblitz-edit/stackblitz-edit.component';
+import { AddDrawControlsComponent } from './examples/add-draw-controls.component';
 
 export enum Category {
   STYLES = 'Styles',
@@ -66,6 +67,7 @@ export const DEMO_ROUTES: Routes = [
       { path: 'satellite-map', component: SatelliteMapComponent, data: { label: 'Display a satellite map', cat: Category.STYLES } },
       { path: 'add-image-generated', component: AddImageGeneratedComponent, data: { label: 'Add a generated icon to the map', cat: Category.LAYERS } },
       { path: 'add-image', component: AddImageComponent, data: { label: 'Add an icon to the map', cat: Category.LAYERS } },
+      { path: 'add-draw-control', component: AddDrawControlsComponent, data: { label: 'Add draw control on map', cat: Category.LAYERS } },
       { path: 'toggle-layers', component: ToggleLayersComponent, data: { label: 'Show and hide layers', cat: Category.LAYERS } },
       { path: '3d-buildings', component: Display3dBuildingsComponent, data: { label: 'Display 3d buildings', cat: Category.LAYERS } },
       { path: 'cluster', component: ClusterComponent, data: { label: 'Create and style clusters', cat: Category.LAYERS } },
@@ -146,7 +148,8 @@ export const DEMO_ROUTES: Routes = [
     ZoomtoLinestringComponent,
     NgxMarkerClusterComponent,
     ClusterPopupComponent,
-    Display3dBuildingsComponent
+    Display3dBuildingsComponent,
+    AddDrawControlsComponent
   ]
 })
 export class DemoModule { }
